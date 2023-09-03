@@ -1,6 +1,8 @@
 module github.com/sdcxtech/sentrytemporal
 
-go 1.17
+go 1.21
+
+toolchain go1.21.0
 
 require (
 	github.com/getsentry/sentry-go v0.13.0
