@@ -8,8 +8,8 @@ import (
 	sdkinterceptor "go.temporal.io/sdk/interceptor"
 	"go.temporal.io/sdk/worker"
 
-	sentrytemp "github.com/sdcxtech/sentrytemporal"
-	"github.com/sdcxtech/sentrytemporal/tests/activity_cases"
+	sentrytemp "github.com/zax-29/sentrytemporal"
+	"github.com/zax-29/sentrytemporal/tests/activity_cases"
 )
 
 func main() {

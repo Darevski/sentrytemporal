@@ -6,7 +6,7 @@ import (
 
 	"go.temporal.io/sdk/client"
 
-	"github.com/sdcxtech/sentrytemporal/tests/activity_cases"
+	"github.com/zax-29/sentrytemporal/tests/activity_cases"
 )
 
 func main() {

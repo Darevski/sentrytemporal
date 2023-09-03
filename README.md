@@ -6,7 +6,7 @@ to [sentry](https://github.com/getsentry/sentry) server.
 ## Installation
 
 ```sh
-go get github.com/sdcxtech/sentrytemporal
+go get github.com/zax-29/sentrytemporal
 ```
 
 ```go
