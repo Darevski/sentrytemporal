@@ -1,4 +1,4 @@
-module github.com/sdcxtech/sentrytemporal
+module github.com/zax-29/sentrytemporal
 
 go 1.21
 

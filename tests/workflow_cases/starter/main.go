@@ -4,7 +4,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/sdcxtech/sentrytemporal/tests/workflow_cases"
+	"github.com/zax-29/sentrytemporal/tests/workflow_cases"
 	"go.temporal.io/sdk/client"
 )
 
