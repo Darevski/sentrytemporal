@@ -1,15 +1,19 @@
-module github.com/zax-29/sentrytemporal
+module github.com/darevski/sentrytemporal
 
 go 1.21
 
 toolchain go1.21.0
 
 require (
+	github.com/cockroachdb/errors v1.9.1
 	github.com/getsentry/sentry-go v0.23.0
+	github.com/zax-29/sentrytemporal v0.0.0-20230903191531-023ad58710b7
 	go.temporal.io/sdk v1.24.0
 )
 
 require (
+	github.com/cockroachdb/logtags v0.0.0-20211118104740-dabe8e521a4f // indirect
+	github.com/cockroachdb/redact v1.1.3 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
 	github.com/gogo/googleapis v1.4.1 // indirect
@@ -20,9 +24,13 @@ require (
 	github.com/google/uuid v1.3.1 // indirect
 	github.com/grpc-ecosystem/go-grpc-middleware v1.4.0 // indirect
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
+	github.com/kr/pretty v0.3.0 // indirect
+	github.com/kr/text v0.2.0 // indirect
 	github.com/pborman/uuid v1.2.1 // indirect
+	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/robfig/cron v1.2.0 // indirect
+	github.com/rogpeppe/go-internal v1.9.0 // indirect
 	github.com/stretchr/objx v0.5.1 // indirect
 	github.com/stretchr/testify v1.8.4 // indirect
 	go.temporal.io/api v1.24.0 // indirect

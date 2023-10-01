@@ -2,8 +2,8 @@ package sentrytemporal
 
 import (
 	"context"
-	"errors"
 
+	"github.com/cockroachdb/errors"
 	"github.com/getsentry/sentry-go"
 	"go.temporal.io/sdk/activity"
 	"go.temporal.io/sdk/interceptor"
@@ -18,7 +18,7 @@ func (a *activityInboundInterceptor) ExecuteActivity(
 	ctx context.Context,
 	in *interceptor.ExecuteActivityInput,
 ) (ret interface{}, err error) {
-	hub := a.root.hub.Clone()
+	hub := sentry.CurrentHub().Clone()
 	ctx = sentry.SetHubOnContext(ctx, hub)
 
 	configureScope := func(scope *sentry.Scope) {
@@ -64,7 +64,7 @@ func (a *activityInboundInterceptor) ExecuteActivity(
 		}
 
 		hub.ConfigureScope(configureScope)
-		_ = hub.CaptureException(err)
+		_ = hub.Client().CaptureEvent(prepareSentryReport(err), nil, hub.Scope())
 	}
 
 	return

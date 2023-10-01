@@ -2,7 +2,6 @@ package sentrytemporal
 
 import (
 	"context"
-
 	"github.com/getsentry/sentry-go"
 	"go.temporal.io/sdk/interceptor"
 	"go.temporal.io/sdk/workflow"
@@ -34,20 +33,13 @@ type (
 func New(hub *sentry.Hub, opts Options) interceptor.WorkerInterceptor {
 	i := &workerInterceptor{
 		options: opts,
-		hub:     hub,
 	}
-
-	if i.hub == nil {
-		i.hub = sentry.CurrentHub()
-	}
-
 	return i
 }
 
 type workerInterceptor struct {
 	interceptor.WorkerInterceptorBase
 	options Options
-	hub     *sentry.Hub
 }
 
 func (w *workerInterceptor) InterceptActivity(
