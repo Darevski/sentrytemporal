@@ -30,7 +30,7 @@ type (
 )
 
 // New creates a worker interceptor which will report error to sentry.
-func New(hub *sentry.Hub, opts Options) interceptor.WorkerInterceptor {
+func New(opts Options) interceptor.WorkerInterceptor {
 	i := &workerInterceptor{
 		options: opts,
 	}
